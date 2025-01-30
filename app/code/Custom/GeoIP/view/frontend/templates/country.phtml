@@ -1,4 +1,4 @@
 <?php
-$getCountryCode = $block->getCountryCode();
-echo $getCountryCode;
+$blockId = $block->getCountryCode();
+echo $this->getLayout()->createBlock('Magento\Cms\Block\Block')->setBlockId($blockId)->toHtml();
 ?>

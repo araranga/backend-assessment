@@ -21,5 +21,8 @@ class GeoIPBlock extends Template
         return $this->geoIPService->getCountryCode();
     }
 
-
+    public function getStaticBlockIdentifier()
+    {
+        return ($this->getCountryCode() === 'US') ? 'us_block_data' : 'global_block_data';
+    }
 }
